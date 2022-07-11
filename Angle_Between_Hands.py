@@ -1,0 +1,12 @@
+h,m=map(int,input().split(':'))
+a=abs(h*30-(11*m)/2)
+if(a<360-a):
+    if(a>abs(a)):
+        print("%.1f"%a)
+    else:
+        print(abs(a))
+else:
+    if((360-a)>abs(360-a)):
+        print("%.1f"%360-a)
+    else:
+        print(abs(360-a))
