@@ -1,27 +1,31 @@
-def pal(n):
-    temp=n
-    s=0
-    while(n!=0):
-        d=n%10
-        s=s*10+d
-        n=n//10
-    if(s==temp):
-        return 1
-    else:
-        return 0
-n=int(input())
-for i in range(1,n):
-    if(pal(i)):
-        k=i
-i=n+1
-while(1):
-    if(pal(i)):
-        m=i
+x=int(input())
+for i in range(x-1,0,-1):
+    d=i
+    sum=0
+    while d>0:
+        r=d%10
+        sum=sum*10+r
+        d=d//10
+    if i==sum:
+        min=sum
         break
-    i=i+1
-if(abs(n-k)>abs(n-m)):
-    print(m)
-elif(abs(n-k)==abs(n-m)):
-    print(k,m)
+a=x
+while True:
+    d=x+1
+    sum=0
+    while d>0:
+        r=d%10
+        sum=sum*10+r
+        d=d//10
+    if (x+1)==sum:
+        max=sum
+        break
+    x=x+1
+r1=a-min
+r2=max-a
+if r1<r2:
+    print(min)
+elif r1==r2:
+    print(min,max)
 else:
-    print(k)
+    print(max)
