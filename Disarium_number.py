@@ -1,17 +1,17 @@
-n=int(input())
-c=0
+a=int(input())
+u=t=a
+i=0
 s=0
-temp=n
-while(temp!=0):
-    temp=temp//10
-    c=c+1
-temp=n
-while(temp!=0):
-    d=temp%10
-    s=s+pow(d,c)
-    temp=temp//10
-    c=c-1
-if(s==n):
+while a!=0:
+    j=a%10
+    a=a//10
+    i=i+1
+j=0
+for i in range(i,0,-1):
+    j=u%10
+    s+=pow(j,i)
+    u=u//10
+if s==t:
     print("True")
 else:
     print("False")
