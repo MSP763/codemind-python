@@ -1,5 +1,4 @@
-x=int(input())
-i=0
-for i in range(x):
-    a,b=map(int,input().split())
-    print(a+b)
+n=int(input())
+for i in range(0,n):
+   a,b=map(int,input().split())
+   print(a+b)
